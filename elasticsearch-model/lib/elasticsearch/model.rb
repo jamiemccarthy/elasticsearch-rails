@@ -123,7 +123,7 @@ module Elasticsearch
           include Adapter.from_class(base).importing_mixin
         end
 
-        # Add to the registry if it's a class (and not in intermediate module)
+        # Add to the registry if it's a class (and not an intermediate module)
         Registry.add(base) if base.is_a?(Class)
       end
     end
